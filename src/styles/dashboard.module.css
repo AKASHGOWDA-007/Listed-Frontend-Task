@@ -1,0 +1,293 @@
+.dashboard {
+  display: flex;
+  /* border: 5px solid lawngreen; */
+  /* background: #dddddd; */
+  background: #f7f7f7;
+}
+
+.dashboard__content {
+  margin: 40px;
+  width: 100%;
+  /* border: 2px solid hotpink; */
+  margin-left: 0;
+}
+
+.dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.dahboard__title {
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.search__bar {
+  position: relative;
+}
+
+.dashboard__header input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 6px 15px;
+  width: 180px;
+}
+
+.dashboard__header div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #858585;
+}
+
+.bell-icon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.person {
+  width: 30px;
+  height: 30px;
+}
+
+.person img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.card__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.card__item {
+  padding: 20px 25px;
+  padding-top: 45px;
+  position: relative;
+  width: 220px;
+  border-radius: 20px;
+}
+
+.card__item:nth-child(1) {
+  background: #ddefe0;
+}
+
+.card__item:nth-child(2) {
+  background: #f4ecdd;
+}
+
+.card__item:nth-child(3) {
+  background: #efdada;
+}
+
+.card__item:nth-child(4) {
+  background: #dee0ef;
+}
+
+.card__icon {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+
+.card__icon svg {
+  height: 25px;
+  width: 25px;
+}
+
+.card__item .card__title {
+  text-transform: capitalize;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card__value {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.chartMenu {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+
+.chartMenu h3,
+.pieChart div h3,
+.scheduleHeader h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.chartMenu p,
+.pieChart .pieChartHeader p,
+.scheduleHeader p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1rem;
+  color: #858585;
+}
+
+.bottomContainer {
+  display: flex;
+  gap: 40px;
+}
+
+/* PieChart */
+
+.pieChart {
+  padding: 30px 40px;
+  margin-top: 40px;
+  /* width: 480px; */
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.pieChartHeader,
+.scheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pieChart .pieChartHeader p {
+  font-size: 12px;
+}
+
+.pieChartHeader p svg, .scheduleHeader p svg, .chartMenu p svg {
+  cursor: pointer;
+}
+
+/* Schedule */
+
+.schedule {
+  padding: 30px 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: 40px;
+  /* width: 480px; */
+  flex: 1;
+}
+
+.scheduleHeader {
+  margin-bottom: 25px;
+}
+
+.scheduleContainer {
+  position: relative;
+}
+
+.scheduleContainer div {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.scheduleContainer div span {
+  position: absolute;
+  height: 60px;
+  width: 4px;
+  left: 0;
+  background: #6972c3;
+}
+
+.scheduleContainer div:first-child span {
+  background-color: #9bdd7c;
+}
+
+.scheduleContainer div h4 {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #666666;
+  margin-bottom: 5px;
+}
+
+.scheduleContainer div h5 {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #999999;
+  margin-bottom: 5px;
+}
+
+.scheduleContainer div p {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #999999;
+}
+
+@media screen and (max-width: 1200px) {
+  .card__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .card__item {
+    justify-self: center;
+  }
+  .chart {
+    width: 90%;
+  }
+  .bottomContainer {
+    flex-direction: column;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 650px) {
+  .card__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .dashboard__header div {
+    display: none;
+  }
+  .chart {
+    width: 90%;
+  }
+  .chartMenu {
+    padding: 1rem 0;
+  }
+  .chartMenu canvas {
+    width: 100% !important;
+  }
+  .bottomContainer {
+    flex-direction: column;
+  }
+}
