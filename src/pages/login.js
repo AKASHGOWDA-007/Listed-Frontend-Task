@@ -32,7 +32,9 @@ export default function Login() {
 
   // Google Handler Function
   async function handleGoogleSignin() {
-    signIn("google", { callbackUrl: "http://localhost:3000" });
+    signIn("google", {
+      callbackUrl: "https://listed-frontend-task.vercel.app",
+    });
   }
 
   return (
